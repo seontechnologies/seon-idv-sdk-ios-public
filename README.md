@@ -9,7 +9,7 @@
 The iOS SDK is available to be integrated using Cocoapods. It’s backward compatible down to iOS 13.0. To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'SEONIdVerification', '~> 1.2.2'
+pod 'SEONIdVerification', '~> 1.2.4'
 ```
 
 Then run the command below:
