@@ -5,7 +5,7 @@
 The iOS SDK is available to be integrated using Cocoapods. It’s backward compatible down to iOS 13.0. To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'SEONIdVerification', '~> 1.3.5'
+pod 'SEONIdVerification', '~> 1.4.1'
 ```
 
 Then run the command below:
@@ -110,3 +110,21 @@ SEONTheme.setTextOnDarkColor(.lightGray) // Text color on dark background
 ```
 
 This Markdown includes headers, code blocks, and comments to keep the content organized and readable in your Git repository.
+
+
+
+
+# Changelog
+
+## 1.4.1
+-   Made referenceId required in the CustomerData
+
+## 1.3.5
+-   Liveness Verification as a Standalone Project
+-   Minor improvements
+
+## 1.2.4
+-   Minor improvements
+
+## 1.2.2
+-   Minor improvements
