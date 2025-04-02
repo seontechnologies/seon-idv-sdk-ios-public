@@ -109,10 +109,8 @@ SEONTheme.setTextOnLightColor(.blue) // Text color on light background
 SEONTheme.setTextOnDarkColor(.lightGray) // Text color on dark background
 ```
 
-This Markdown includes headers, code blocks, and comments to keep the content organized and readable in your Git repository.
 
-
-
+For further details, please visit the [Example Application](Example/SEONIDV/Readme.md) in the Repository.
 
 # Changelog
 
