@@ -5,7 +5,7 @@
 The iOS SDK is available to be integrated using Cocoapods. It’s backward compatible down to iOS 13.0. To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'SEONIdVerification', '~> 1.5.0'
+pod 'SEONIdVerification', '~> 1.6.0'
 ```
 
 Then run the command below:
@@ -27,7 +27,28 @@ import SEONIdVerification
 Create customer data where the license key field is mandatory, and there are more optional fields you can set in customerData: referenceId, type, email, phoneNumber, name, userId, address.
 
 ```swift
-let customerData = SEONCustomerData(licenseKey: "YOUR_LICENSE_KEY")
+let customerData = SEONCustomerData(
+  licenseKey: "YOUR_LICENSE_KEY",
+  referenceId: "UNIQUE_REFERENCE_ID", // Random unique value for the session
+                                      // e.g. UUID, or {userID}-{timestamp} (required)
+  email: "user@example.com",          // Email input (optional)
+  name: "John Doe",                   // Name input (optional)
+  phoneNumber: "+1234567890",         // Phone number input (optional)
+  type: "id-verification",            // Process type (optional)
+  userId: "user123",                  // Unique user identifier (optional)
+  countryISOCode: "US",               // ISO code for the country (optional)
+  address: "123 Main St, NY",         // Address input (optional)
+  dateOfBirth: {                      // Reference date for the DoB check (optional)
+    day: 1,
+    month: 1,
+    year: 2000,
+  },
+  postalCode: "12345",                // Reference value for postal check (optional)
+  additionalProperties: {             // Custom key-value pairs (optional)
+    customField1: "value1",
+    customField2: "value2",
+  },
+)
 ```
 
 Initialize the SDK with the base URL, customerData, and preferred language ISO code. The language code is optional. If it is not set, the SDK will use the language of the OS. You may also want to define a template in the Admin Panel, defining the required steps of the verification based on various requirements for different users. In this case, you can provide the ID of that template to configure the current session to have the relevant steps, as defined in your template. You can also avoid passing this parameter and use the default verification steps.
@@ -114,6 +135,11 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 # Changelog
 
+## 1.6.0
+-   Improvements on Liveness Verification Check
+-   Better visibility with descriptive error handling in the SDK session
+-   Minor improvements
+
 ## 1.5.0
 -   Name, ZipCode, DateOfBirth Validation
 -   Minor improvements
@@ -130,3 +156,4 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 ## 1.2.2
 -   Minor improvements
+
