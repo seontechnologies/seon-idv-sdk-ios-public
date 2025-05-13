@@ -16,13 +16,13 @@ pod install
 
 ### Using SDK in Your App
 
-1. Import Framework
+#### 1. Import Framework
 
 ```swift
 import SEONIdVerification
 ```
 
-2. Initialize the SDK
+#### 2. Initialize the SDK
 
 Create customer data where the license key field is mandatory, and there are more optional fields you can set in customerData: referenceId, type, email, phoneNumber, name, userId, address.
 
@@ -62,7 +62,7 @@ SEONIdVerificationService.shared.initialize(
 )
 ```
 
-3. Start Verification Flow
+#### 3. Start Verification Flow
 
 To start the verification, you need to pass your UINavigationController:
 
@@ -70,7 +70,7 @@ To start the verification, you need to pass your UINavigationController:
 SEONIdVerificationService.shared.startIdVerificationFlow(navigationController: navigationController)
 ```
 
-4. Handle Verification Result
+#### 4. Handle Verification Result
 
 Handle the result with a delegate:
 
@@ -130,6 +130,9 @@ SEONTheme.setTextOnLightColor(.blue) // Text color on light background
 SEONTheme.setTextOnDarkColor(.lightGray) // Text color on dark background
 ```
 
+#### 5. Error Codes Documentation
+
+Please refer to [this page](ErrorCodes.md) for the descriptive error codes.
 
 For further details, please visit the [Example Application](Example/SEONIDV/Readme.md) in the Repository.
 
