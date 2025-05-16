@@ -14,6 +14,10 @@ Then run the command below:
 pod install
 ```
 
+Alternatively, since version 1.6.0, you can install the SDK through SPM simply using this URL:
+
+https://github.com/seontechnologies/seon-idv-sdk-ios-public
+
 ### Using SDK in Your App
 
 #### 1. Import Framework
@@ -141,6 +145,7 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 ## 1.6.0
 -   Improvements on Liveness Verification Check
 -   Better visibility with descriptive error handling in the SDK session
+-   Added support for SPM
 -   Minor improvements
 
 ## 1.5.0
