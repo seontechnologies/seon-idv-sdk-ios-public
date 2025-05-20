@@ -138,6 +138,10 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 # Changelog
 
+## 1.6.1
+-   Fixed Sign issue on SPM
+-   Minor improvements
+
 ## 1.6.0
 -   Improvements on Liveness Verification Check
 -   Better visibility with descriptive error handling in the SDK session
