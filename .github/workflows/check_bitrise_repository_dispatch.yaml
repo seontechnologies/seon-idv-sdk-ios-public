@@ -1,0 +1,24 @@
+name: Repository Dispatch Proxy
+
+on:
+  repository_dispatch:
+    types: [from_bitrise]
+
+permissions: {}  # nothing special needed for this demo
+
+jobs:
+  test:
+    runs-on: macos-latest
+    env:
+      # Pull data from the repository_dispatch payload
+      CALLER: ${{ github.event.client_payload.caller }}
+      BUILD_URL: ${{ github.event.client_payload.build_url }}
+      EVENT_TYPE: ${{ github.event.action }}  # will be "from_bitrise"
+    steps:
+      - name: Show who triggered me
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Event type: \"$EVENT_TYPE\""
+          echo "Triggered by \"${CALLER:-unknown}\""
+          echo "Bitrise build: \"${BUILD_URL:-n/a}\""
