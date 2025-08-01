@@ -179,10 +179,10 @@ jobs:
           PY
 
           # Re-insert same release notes (separate branch)
-          python3 - "$VERSION" <<'PY'
+          python3 - "$VERSION" "$RELEASE_NOTES" <<'PY'
           import sys, pathlib, re
           version = sys.argv[1]
-          notes = pathlib.Path("release_notes.txt").read_text()
+          notes = sys.argv[2]
           readme = pathlib.Path("README.md")
           t = readme.read_text()
           m = re.search(r'(^#\s*Changelog\s*\n)', t, re.M)
