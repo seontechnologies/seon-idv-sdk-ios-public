@@ -15,8 +15,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/BlinkID/capture-core-sp", from: "1.3.1"),
-        .package(url: "https://github.com/BlinkID/capture-ux-sp", from: "1.3.1"),
+        .package(url: "https://github.com/BlinkID/capture-core-sp", from: "1.4.3"),
+        .package(url: "https://github.com/BlinkID/capture-ux-sp", from: "1.4.3"),
         .package(url: "https://github.com/hmlongco/Resolver", from: "1.5.1"),
     ],
     targets: [
@@ -31,8 +31,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "SEONIdVerification",
-            url: "https://github.com/seontechnologies/seon-idv-sdk-ios-public/releases/download/v2.0.1/IDV_SPM_Modern.zip",
-            checksum: "862302390aaa60cc205032e958f593a423c6faf78246579647777456e73fc0a2"
+            url: "https://github.com/seontechnologies/seon-idv-sdk-ios-public/releases/download/v2.0.3/IDV_SPM_Modern.zip",
+            checksum: "0f3b58957cbfb4459e90470ff87e02356b30661ff0ea1d1e82497b3a5f4405d3"
         ),
         .binaryTarget(
             name: "BlinkID",

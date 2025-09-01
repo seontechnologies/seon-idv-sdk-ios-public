@@ -5,7 +5,7 @@
 The iOS SDK is available to be integrated using Cocoapods and SPM. To install it using Cocoapods, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'SEONIdVerification', '~> 2.0.1'
+pod 'SEONIdVerification', '~> 2.0.3'
 ```
 
 Then run the command below:
@@ -23,13 +23,13 @@ While we try to keep the backward compatibility down to lower iOS versions (curr
 ### In case you want to use iOS 16+ variant:
 
 ```ruby
-pod 'SEONIdVerification-ModernAPI', '~> 2.0.1'
+pod 'SEONIdVerification-ModernAPI', '~> 2.0.3'
 ```
 
 For SPM, you can use tags which has the `-ModernAPI` suffix to get the iOS 16+ variant. As of now, the latest release has the tag:
 
 ```
-v2.0.1-ModernAPI
+v2.0.3-ModernAPI
 ```
 
 You can simply use the versions which have these suffixes as the Branch name over Xcode and use the ModernAPI version.
@@ -169,6 +169,9 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 # Changelog
 
+## 2.0.3
+-   Resolved an error in the resources bundle while trying to archive and submit
+
 ## 2.0.1
 -   Introduced a new variant for iOS 16+ updates which ID Verification providers published. Both variants will be updated constantly as long as the lower iOS versions are supported by our customers and also by Apple.
 -   Upgraded the Document Verification SDK, which improves UX and verification results
@@ -201,4 +204,3 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 ## 1.2.2
 -   Minor improvements
-
