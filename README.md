@@ -2,10 +2,10 @@
 
 ## Setting up Developer Environments
 
-The iOS SDK is available to be integrated using Cocoapods and SPM. To install it, simply add the following line to your `Podfile`:
+The iOS SDK is available to be integrated using Cocoapods and SPM. To install it using Cocoapods, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'SEONIdVerification', '~> 2.0.1'
+pod 'SEONIdVerification', '~> 2.0.3'
 ```
 
 Then run the command below:
@@ -18,19 +18,21 @@ Alternatively, since version 1.6.0, you can install the SDK through SPM simply u
 
 https://github.com/seontechnologies/seon-idv-sdk-ios-public
 
-While we try to keep the backward compatibility down to lower iOS versions (currently down to 13.0), since some Document Verification Providers are releasing their updates on iOS 16 and higher, we are providing both variants for you. If you require to support iOS users down to iOS 13.0, simply use the configurations above. And if you prefer to go on the higher edge and have those updates published on higher iOS versions, use  configurations below. Please note that this doesn't mean that the above configurations will not get updated with latest features anymore, as we will keep updating the SDK with latest changes available from our providers on both variants. So, please stay tuned and make the choice based on the condition of your own app between the two variants.
+While we try to keep the backward compatibility down to lower iOS versions (currently down to 13.0), since some Document Verification Providers are releasing their updates on iOS 16 and higher, we are providing both variants for you. If you require to support iOS users down to iOS 13.0, simply use the configurations above. And if you prefer to go on the higher edge and have those updates published on higher iOS versions, use  configurations below. Please note that this doesn't mean that the above configurations will not get updated with latest features anymore, as we will keep updating the SDK with latest changes available from our providers on both variants. So, please stay tuned and make the choice based on the condition of your own app between the two variants. Considering that there are more features and providers on the way to be added to SEON ID Verification SDK, we avoid pushing all the customers to raise their Minimum Deployment iOS Version for the maximum compatibility with the trends, while supporting those who drive on the highest edge of iOS API.
 
 ### In case you want to use iOS 16+ variant:
 
 ```ruby
-pod 'SEONIdVerification-ModernAPI', '~> 2.0.1'
+pod 'SEONIdVerification-ModernAPI', '~> 2.0.3'
 ```
 
 For SPM, you can use tags which has the `-ModernAPI` suffix to get the iOS 16+ variant. As of now, the latest release has the tag:
 
 ```
-v2.0.1-ModernAPI
+v2.0.3-ModernAPI
 ```
+
+You can simply use the versions which have these suffixes as the Branch name over Xcode and use the ModernAPI version.
 
 We will update each of variants as soon as we have more updates and improvements from each group of providers. Of course, internal updates from SEON and the services which are solely provided by SEON will be updated on both variants.
 
@@ -167,8 +169,11 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 # Changelog
 
+## 2.0.3
+-   Resolved an error in the resources bundle while trying to archive and submit
+
 ## 2.0.1
--   Introduced a new variant for iOS 16+ updates which ID verification providers published. Both variants will be updated constantly as long as the lower iOS versions are supported by our customers and also by Apple.
+-   Introduced a new variant for iOS 16+ updates which ID Verification providers published. Both variants will be updated constantly as long as the lower iOS versions are supported by our customers and also by Apple.
 -   Upgraded the Document Verification SDK, which improves UX and verification results
 -   White-labeling the SDK. Now you can modify fonts and watermarks on the SDK flow
 -   Minor improvements
@@ -199,4 +204,5 @@ For further details, please visit the [Example Application](Example/SEONIDV/Read
 
 ## 1.2.2
 -   Minor improvements
+
 
