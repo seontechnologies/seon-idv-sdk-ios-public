@@ -47,13 +47,17 @@ jobs:
           fi
           echo "Prepared release_notes.txt"
 
+      - name: Debug ARTIFACTS_JSON
+        run: echo "ARTIFACTS_JSON=${ARTIFACTS_JSON}"
+
       - name: Extract artifact URLs from payload
         shell: bash
         run: |
           set -euo pipefail
           python3 - "$ARTIFACTS_JSON" <<'PY'
           import json, sys
-          arr = json.loads(sys.argv[1] or "[]")
+          arr = json.loads(sys.argv[1]) if sys.argv[1] else []
+          arr = arr or []
           std = modern = None
           for it in arr:
             name = (it.get("name") or "").lower()
