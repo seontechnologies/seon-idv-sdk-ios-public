@@ -28,6 +28,7 @@ let package = Package(
                 .product(name: "BlinkID", package: "blinkid-ios"),
                 .product(name: "CaptureCore", package: "capture-core-sp"),
                 .product(name: "CaptureUX", package: "capture-ux-sp"),
+                .product(name: "Resolver", package: "Resolver")
             ]
         ),
         .binaryTarget(
